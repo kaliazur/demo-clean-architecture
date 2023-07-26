@@ -1,9 +1,22 @@
 package domain
 
 type User struct {
-	Id        string `json:"id"`
-	Username  string `json:"username"`
-	Firstname string `json:"firstname"`
-	Age       int    `json:"age"`
-	IsAdmin   bool   `json:"is_admin"`
+	Id        	string
+	Username  	string
+	Firstname 	string
+	Age       	int
+	Admin   	bool
+	Apis  		int
+}
+
+func (u *User) GetId() string {
+	return u.Id
+}
+
+func (u *User) IsAdmin() bool {
+	return u.Admin
+}
+
+func (u *User) GetApis() int {
+	return u.Apis
 }
